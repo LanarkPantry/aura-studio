@@ -12,20 +12,20 @@ export default function HomePage() {
                 Aura Studio
               </p>
               <p className="mt-1 text-[11px] uppercase tracking-[0.24em] text-[#7B7269]">
-                Booking software
+                Booking software for wellness businesses
               </p>
             </div>
           </div>
 
           <nav className="hidden items-center gap-8 text-sm text-[#6A625A] md:flex">
-            <a href="#approach" className="transition hover:text-[#2E2A26]">
-              Approach
+            <a href="#why" className="transition hover:text-[#2E2A26]">
+              Why Aura
             </a>
             <a href="#product" className="transition hover:text-[#2E2A26]">
               Product
             </a>
             <a href="/book" className="transition hover:text-[#2E2A26]">
-              Demo
+              View demo
             </a>
           </nav>
         </div>
@@ -35,38 +35,55 @@ export default function HomePage() {
         <div className="grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="lg:pt-10">
             <p className="text-sm uppercase tracking-[0.26em] text-[#81786F]">
-              A more considered booking system
+              Built for studios, practitioners, and modern wellness businesses
             </p>
 
-            <h1 className="mt-5 max-w-3xl font-serif text-5xl leading-[0.98] tracking-tight md:text-7xl">
-              Booking, classes, and clients — with a lighter touch.
+            <h1 className="mt-5 max-w-4xl font-serif text-5xl leading-[0.98] tracking-tight md:text-7xl">
+              Finally, booking software built for businesses running both
+              classes and 1:1 sessions.
             </h1>
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-[#665E56]">
-              Built for modern studios and independent practices running a mix
-              of classes, private sessions, and client relationships.
+              Aura Studio brings scheduling, bookings, and client management
+              into one calm, clear system — without the workarounds of generic
+              tools.
             </p>
 
-            <div className="mt-10 flex items-center gap-6">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="/book"
+                className="inline-flex items-center justify-center bg-[#55624A] px-6 py-3 text-sm font-medium text-white shadow-[0_12px_28px_rgba(85,98,74,0.18)] transition hover:bg-[#4A5640]"
+              >
+                View demo
+              </a>
               <a
                 href="#early"
-                className="inline-flex items-center justify-center bg-[#55624A] px-6 py-3 text-sm font-medium text-white shadow-[0_12px_28px_rgba(85,98,74,0.18)] transition hover:bg-[#4A5640]"
+                className="inline-flex items-center justify-center border border-[#D9CEC2] px-6 py-3 text-sm font-medium text-[#2E2A26] transition hover:bg-[#F1EBE4]"
               >
                 Request early access
               </a>
-              <a
-                href="/book"
-                className="text-sm font-medium text-[#2E2A26] underline underline-offset-4"
-              >
-                View demo →
-              </a>
             </div>
 
-            <div className="mt-14 max-w-md border-t border-[#DDD2C5] pt-6">
-              <p className="text-sm leading-7 text-[#6F675F]">
-                Not adapted from a generic booking tool. Designed around the
-                rhythm of real studios and practices from the start.
-              </p>
+            <div className="mt-14 grid max-w-xl gap-4 border-t border-[#DDD2C5] pt-6 sm:grid-cols-3">
+              <div>
+                <p className="text-sm font-medium">One system</p>
+                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
+                  Run weekly classes and private sessions side by side.
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Cleaner booking</p>
+                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
+                  Give clients a booking experience that feels simple and
+                  trustworthy.
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-medium">Less admin</p>
+                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
+                  Keep bookings, clients, and confirmations in one place.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -79,9 +96,9 @@ export default function HomePage() {
                   className="h-[620px] w-full object-cover"
                 />
 
-                <div className="absolute -bottom-10 left-8 hidden w-[320px] bg-[#FFFCF8] p-5 shadow-[0_24px_60px_rgba(46,42,38,0.14)] lg:block">
+                <div className="absolute -bottom-10 left-8 hidden w-[340px] bg-[#FFFCF8] p-5 shadow-[0_24px_60px_rgba(46,42,38,0.14)] lg:block">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
-                    Live schedule
+                    Today&apos;s schedule
                   </p>
 
                   <div className="mt-4 space-y-3">
@@ -121,14 +138,14 @@ export default function HomePage() {
               <div className="flex flex-col gap-6 lg:pt-24">
                 <div className="bg-[#2E2A26] p-6 text-white shadow-[0_24px_60px_rgba(46,42,38,0.18)]">
                   <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                    Client view
+                    Client booking
                   </p>
                   <h2 className="mt-3 font-serif text-3xl leading-tight">
-                    A booking experience that feels considered.
+                    A booking flow that feels calm from first click.
                   </h2>
                   <p className="mt-4 text-sm leading-7 text-white/75">
-                    Clean choices. Clear timing. Less friction from first click
-                    to confirmation.
+                    Clear service choices, clean time selection, and less
+                    friction between interest and confirmation.
                   </p>
                 </div>
 
@@ -153,30 +170,51 @@ export default function HomePage() {
       </section>
 
       <section
-        id="approach"
-        className="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10"
+        id="why"
+        className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-28"
       >
-        <div>
-          <p className="text-sm uppercase tracking-[0.26em] text-[#81786F]">
-            Approach
-          </p>
-          <h2 className="mt-5 max-w-lg font-serif text-4xl leading-tight tracking-tight md:text-5xl">
-            Software shaped to fit the spaces it serves.
-          </h2>
-        </div>
-
-        <div className="grid gap-8 text-[#665E56] md:grid-cols-2">
+        <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr]">
           <div>
-            <p className="text-lg leading-8">
-              Aura Studio is built for businesses where classes and private
-              sessions often live side by side.
+            <p className="text-sm uppercase tracking-[0.26em] text-[#81786F]">
+              Why Aura
             </p>
+            <h2 className="mt-5 max-w-lg font-serif text-4xl leading-tight tracking-tight md:text-5xl">
+              Most booking tools make wellness businesses adapt to them.
+            </h2>
           </div>
+
           <div>
-            <p className="text-lg leading-8">
-              The result is a booking system that feels lighter to run and more
-              aligned with the experience your clients already expect from you.
+            <p className="max-w-2xl text-lg leading-8 text-[#665E56]">
+              Aura Studio is designed for the real shape of modern practice:
+              recurring classes, private sessions, changing availability, and
+              ongoing client relationships — all held in one system.
             </p>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="border-t border-[#D8CCBF] pt-5">
+                <p className="text-base font-medium">Classes + 1:1 together</p>
+                <p className="mt-3 text-sm leading-7 text-[#665E56]">
+                  No split setup, no awkward workaround, no second system for
+                  appointments.
+                </p>
+              </div>
+
+              <div className="border-t border-[#D8CCBF] pt-5">
+                <p className="text-base font-medium">Client experience first</p>
+                <p className="mt-3 text-sm leading-7 text-[#665E56]">
+                  A booking flow that feels aligned with a premium wellness
+                  brand, not generic software.
+                </p>
+              </div>
+
+              <div className="border-t border-[#D8CCBF] pt-5">
+                <p className="text-base font-medium">Admin that stays light</p>
+                <p className="mt-3 text-sm leading-7 text-[#665E56]">
+                  Keep schedules, bookings, details, and confirmations clear and
+                  manageable as you grow.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,31 +234,34 @@ export default function HomePage() {
               Built for real practice
             </p>
             <h2 className="mt-5 font-serif text-4xl leading-tight tracking-tight md:text-5xl">
-              Classes and 1:1 sessions, finally held in the same rhythm.
+              One rhythm for classes, appointments, and client care.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#665E56]">
-              No awkward workaround for appointments. No separate system for
-              classes. Just one clear way to manage the moving parts of a modern
-              practice.
+              Whether you run a studio timetable, offer private sessions, or do
+              both, Aura Studio brings the moving parts together in a way that
+              feels simpler to manage and better to book through.
             </p>
 
             <div className="mt-10 grid gap-8 border-t border-[#D8CCBF] pt-8 md:grid-cols-3">
               <div>
                 <p className="font-serif text-3xl">01</p>
                 <p className="mt-3 text-sm leading-7 text-[#665E56]">
-                  Recurring classes and one-off sessions in the same flow.
+                  Recurring classes and one-off appointments managed in the same
+                  flow.
                 </p>
               </div>
               <div>
                 <p className="font-serif text-3xl">02</p>
                 <p className="mt-3 text-sm leading-7 text-[#665E56]">
-                  A booking page that feels clean, calm, and easy to trust.
+                  A client booking experience that feels clean, calm, and easy
+                  to trust.
                 </p>
               </div>
               <div>
                 <p className="font-serif text-3xl">03</p>
                 <p className="mt-3 text-sm leading-7 text-[#665E56]">
-                  Admin that supports the business without taking over it.
+                  Day-to-day admin that supports the business without taking it
+                  over.
                 </p>
               </div>
             </div>
@@ -238,33 +279,36 @@ export default function HomePage() {
               Product
             </p>
             <h2 className="mt-5 max-w-xl font-serif text-4xl leading-tight tracking-tight md:text-5xl">
-              The essentials, presented with clarity.
+              The essentials of running a wellness business, made clearer.
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-8 text-[#665E56]">
-              Schedule sessions, take bookings, manage clients, and send
-              confirmations — without the clutter that usually comes with
-              booking software.
+              Schedule classes, take private bookings, manage clients, and send
+              confirmations — all inside one system designed for small studios
+              and independent practitioners.
             </p>
 
             <div className="mt-10 space-y-6">
               <div className="border-l border-[#CDBEAE] pl-5">
-                <p className="text-lg font-medium">Class scheduling</p>
+                <p className="text-lg font-medium">Weekly class scheduling</p>
                 <p className="mt-2 leading-7 text-[#665E56]">
-                  Build weekly timetables and manage attendance with less fuss.
+                  Build recurring timetables, manage attendance, and keep the
+                  week visible at a glance.
                 </p>
               </div>
 
               <div className="border-l border-[#CDBEAE] pl-5">
-                <p className="text-lg font-medium">Appointment booking</p>
+                <p className="text-lg font-medium">Private session booking</p>
                 <p className="mt-2 leading-7 text-[#665E56]">
-                  Offer 1:1 sessions inside the same system, not beside it.
+                  Offer 1:1 appointments without bolting on a separate booking
+                  tool.
                 </p>
               </div>
 
               <div className="border-l border-[#CDBEAE] pl-5">
                 <p className="text-lg font-medium">Client management</p>
                 <p className="mt-2 leading-7 text-[#665E56]">
-                  Keep bookings, details, and communication in one quiet place.
+                  Keep bookings, client details, and communication in one quiet,
+                  organised place.
                 </p>
               </div>
             </div>
@@ -343,14 +387,14 @@ export default function HomePage() {
 
               <div className="bg-[#2E2A26] p-6 text-white">
                 <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Early access
+                  Early access pricing
                 </p>
                 <p className="mt-3 font-serif text-3xl leading-tight">
                   £30 / month
                 </p>
                 <p className="mt-4 text-sm leading-7 text-white/75">
-                  Early-stage pricing for studios and practices helping shape
-                  the product.
+                  Early-stage pricing for studios and practitioners helping
+                  shape the product in real use.
                 </p>
               </div>
             </div>
@@ -366,12 +410,13 @@ export default function HomePage() {
                 Founder access
               </p>
               <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight tracking-tight md:text-5xl">
-                A more considered booking system, shaped in the real world.
+                Join the first studios and practitioners shaping Aura Studio.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-                We&apos;re onboarding a small number of early studios and
-                practices who want something simpler, more fitting, and more
-                enjoyable to use.
+                We&apos;re onboarding a small number of early users who want a
+                more fitting way to run classes, private sessions, and client
+                bookings — with direct access to the founder as the product
+                evolves.
               </p>
             </div>
 
