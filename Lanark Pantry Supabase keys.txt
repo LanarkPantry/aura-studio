@@ -1,0 +1,7 @@
+lanark Pantry Supabase keys
+
+anon public
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVheGlrc3FhZWVtaGZ4ZWRvcmhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTc0ODgsImV4cCI6MjA5MDk3MzQ4OH0.jHXC6KTIaIjLAA2cHDocM5I99GyseyMBdjSNNsaFw50
+
+project url
+https://uaxiksqaeemhfxedorho.supabase.co
