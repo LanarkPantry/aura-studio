@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+/* ===== Base Theme ===== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f5f1;
+  --foreground: #2e2a26;
+
+  --surface: #fffdfc;
+  --surface-alt: #f5eee7;
+
+  --border: #e7ded4;
+
+  --primary: #55624a;
+  --primary-hover: #4a5640;
+
+  --muted: #6f675f;
 }
 
+/* ===== Tailwind Inline Theme Mapping ===== */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== Global Styles ===== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Typography ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-serif), serif;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: #d9e1d4;
+  color: #2e2a26;
+}
+
+/* ===== Scrollbar (optional but nice) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3eee8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6cdc3;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8bfb4;
 }
