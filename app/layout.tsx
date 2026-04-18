@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Aura Studio",
-  description: "Booking for independent practices.",
+  description: "Classes and private sessions. One system.",
 };
 
 export default function RootLayout({
