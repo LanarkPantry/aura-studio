@@ -1,3 +1,5 @@
+// Aura Studio Admin Page (app/admin/page.tsx)
+
 "use client";
 
 import { CalendarDays, Users, CreditCard, LayoutDashboard } from "lucide-react";
@@ -12,6 +14,7 @@ const schedule = [
 export default function AdminPage() {
   return (
     <main className="flex min-h-screen bg-[#F5F1EB] text-[#2E2A26]">
+
       {/* Sidebar */}
       <aside className="hidden w-64 flex-col justify-between bg-[#2F372A] p-6 text-white md:flex">
         <div>
@@ -38,6 +41,7 @@ export default function AdminPage() {
 
       {/* Main */}
       <div className="flex flex-1 flex-col">
+
         {/* Top bar */}
         <header className="flex items-center justify-between border-b border-[#E6DDD3] bg-white px-6 py-4">
           <h1 className="font-serif text-2xl">This week</h1>
@@ -46,6 +50,7 @@ export default function AdminPage() {
 
         {/* Content */}
         <div className="grid flex-1 gap-6 p-6 lg:grid-cols-[1fr_360px]">
+
           {/* Schedule */}
           <div className="rounded-2xl border border-[#E2D8CC] bg-white p-5">
             <h2 className="font-serif text-xl">Schedule</h2>
@@ -57,10 +62,14 @@ export default function AdminPage() {
                   className="flex items-center justify-between rounded-xl border border-[#ECE2D7] p-4"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="text-sm text-[#7B7269]">{item.time}</div>
+                    <div className="text-sm text-[#7B7269]">
+                      {item.time}
+                    </div>
                     <div>
                       <p className="font-medium">{item.title}</p>
-                      <p className="text-sm text-[#7B7269]">{item.meta}</p>
+                      <p className="text-sm text-[#7B7269]">
+                        {item.meta}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -75,7 +84,9 @@ export default function AdminPage() {
             <div className="mt-4 space-y-4 text-sm">
               <div>
                 <p className="font-medium">Private Session</p>
-                <p className="text-[#7B7269]">Wednesday · 10:00 – 10:45</p>
+                <p className="text-[#7B7269]">
+                  Wednesday · 10:00 – 10:45
+                </p>
               </div>
 
               <div>
@@ -85,7 +96,9 @@ export default function AdminPage() {
 
               <div>
                 <p className="font-medium">Notes</p>
-                <p className="text-[#7B7269]">Focus on lower back mobility.</p>
+                <p className="text-[#7B7269]">
+                  Focus on lower back mobility.
+                </p>
               </div>
 
               <button className="mt-4 w-full rounded-full bg-[#55624A] py-2 text-white">
