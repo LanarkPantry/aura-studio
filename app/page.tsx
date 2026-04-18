@@ -1,6 +1,12 @@
 "use client";
 
-import { CalendarDays, Leaf, MonitorPlay, Sparkles } from "lucide-react";
+import {
+  CalendarDays,
+  Leaf,
+  MonitorPlay,
+  Sparkles,
+  CheckCircle2,
+} from "lucide-react";
 
 const mobileNavItems = [
   {
@@ -80,13 +86,19 @@ const weeklyScheduleItems = [
   },
 ];
 
+const benefitItems = [
+  "Run classes and appointments together",
+  "Give clients a calmer booking experience",
+  "Keep admin light as you grow",
+];
+
 export default function HomePage() {
   return (
     <main className="bg-[#F8F5F1] pb-28 text-[#2E2A26] md:pb-0">
-      <header className="sticky top-0 z-40 border-b border-[#E6DDD3] bg-[#F8F5F1]/95 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-[#E6DDD3] bg-[#F8F5F1]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8CDC1] text-sm text-[#2E2A26]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8CDC1] bg-[#FFFCF8] text-sm text-[#2E2A26]">
               A
             </div>
             <div>
@@ -116,144 +128,151 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pb-28 lg:pt-12">
-        <div className="grid items-start gap-12 lg:grid-cols-2">
-          <div className="lg:pt-8">
-            <p className="text-sm uppercase tracking-[0.2em] text-[#81786F]">
-              Built for studios, practitioners, and wellness businesses
-            </p>
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#E8E1D7] via-[#F3EEE7] to-[#F8F5F1]" />
+        <div className="absolute right-0 top-0 hidden h-full w-[42%] bg-[#55624A] lg:block" />
+        <div className="absolute inset-x-0 top-0 h-[320px] bg-[#E8E1D7] sm:h-[360px] lg:hidden" />
 
-            <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-tight tracking-tight sm:text-5xl lg:text-7xl">
-              Booking software for businesses running both classes and 1:1
-              sessions.
-            </h1>
-
-            <p className="mt-6 max-w-xl text-base leading-7 text-[#665E56] sm:text-lg sm:leading-8">
-              Aura Studio brings scheduling, bookings, and client management
-              into one calm, clear system — without the workarounds of generic
-              tools.
-            </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <a
-                href="/book"
-                className="inline-flex items-center justify-center bg-[#55624A] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#4A5640]"
-              >
-                View demo
-              </a>
-              <a
-                href="#early"
-                className="inline-flex items-center justify-center border border-[#D9CEC2] px-6 py-3 text-sm font-medium text-[#2E2A26] transition hover:bg-[#F1EBE4]"
-              >
-                Request early access
-              </a>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <div className="border border-[#E2D8CC] bg-[#FFFCF8] p-4">
-                <p className="text-sm font-medium">Classes + 1:1</p>
-                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
-                  Run weekly classes and private sessions in one system.
-                </p>
+        <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pb-28 lg:pt-12">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
+            <div className="lg:pt-8">
+              <div className="inline-flex items-center gap-2 border border-[#D8CDC1] bg-[#FFFCF8]/90 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-[#6E665F] backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-[#55624A]" />
+                Built for studios, practitioners, and wellness businesses
               </div>
 
-              <div className="border border-[#E2D8CC] bg-[#FFFCF8] p-4">
-                <p className="text-sm font-medium">Cleaner booking</p>
-                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
-                  A booking flow that feels simple, calm, and easy to trust.
-                </p>
-              </div>
+              <h1 className="mt-5 max-w-4xl font-serif text-[2.5rem] leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
+                Booking software for
+                <span className="block text-[#55624A]">
+                  classes and 1:1 sessions
+                </span>
+                without the workaround.
+              </h1>
 
-              <div className="border border-[#E2D8CC] bg-[#FFFCF8] p-4">
-                <p className="text-sm font-medium">Less admin</p>
-                <p className="mt-2 text-sm leading-6 text-[#6F675F]">
-                  Keep bookings, clients, and confirmations together.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 border-t border-[#E2D8CC] pt-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
-                Built for
+              <p className="mt-5 max-w-xl text-[17px] leading-8 text-[#5F5750] sm:text-lg">
+                Aura Studio brings scheduling, bookings, and client management
+                into one calm, clear system built for modern wellness
+                businesses.
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-3">
-                <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
-                  Yoga studios
-                </span>
-                <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
-                  Pilates spaces
-                </span>
-                <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
-                  Solo practitioners
-                </span>
-                <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
-                  Wellness practices
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-5 lg:pt-8">
-            <div className="overflow-hidden border border-[#E8DDD1] bg-[#FFFCF8]">
-              <div className="border-b border-[#EEE4D9] px-5 py-4">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
-                  Today&apos;s schedule
-                </p>
-                <h2 className="mt-2 font-serif text-3xl">At a glance</h2>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <a
+                  href="/book"
+                  className="inline-flex items-center justify-center bg-[#55624A] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#4A5640]"
+                >
+                  View demo
+                </a>
+                <a
+                  href="#early"
+                  className="inline-flex items-center justify-center border border-[#CFC3B7] bg-[#FFFCF8]/80 px-6 py-3 text-sm font-medium text-[#2E2A26] transition hover:bg-[#F1EBE4]"
+                >
+                  Request early access
+                </a>
               </div>
 
-              <div className="grid gap-3 p-5">
-                {scheduleItems.map((item) => (
+              <div className="mt-7 grid gap-3">
+                {benefitItems.map((item) => (
                   <div
-                    key={`${item.time}-${item.title}`}
-                    className="flex items-center justify-between border border-[#ECE2D7] bg-white p-4"
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-[#E2D8CC] bg-[#FFFCF8]/90 px-4 py-3 backdrop-blur"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="min-w-[58px] text-sm text-[#7B7269]">
-                        {item.time}
-                      </div>
-                      <div>
-                        <p className="font-medium">{item.title}</p>
-                        <p className="mt-1 text-sm text-[#7B7269]">
-                          {item.meta}
-                        </p>
-                      </div>
-                    </div>
-                    <span className={`px-2 py-1 text-xs ${item.tagClass}`}>
-                      {item.tag}
-                    </span>
+                    <CheckCircle2
+                      className="mt-0.5 h-5 w-5 shrink-0 text-[#55624A]"
+                      strokeWidth={1.8}
+                    />
+                    <p className="text-sm leading-6 text-[#5F5750]">{item}</p>
                   </div>
                 ))}
               </div>
+
+              <div className="mt-8 border-t border-[#DCCFC2] pt-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
+                  Built for
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Yoga studios
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Pilates spaces
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Solo practitioners
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Wellness practices
+                  </span>
+                </div>
+              </div>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div className="bg-[#2E2A26] p-6 text-white">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/60">
-                  Client booking
-                </p>
-                <h3 className="mt-3 font-serif text-2xl leading-tight">
-                  A booking flow that feels calm from first click.
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-white/75">
-                  Clear choices, clean time selection, and less friction from
-                  interest to confirmation.
-                </p>
+            <div className="grid gap-5 lg:pt-8">
+              <div className="overflow-hidden rounded-[28px] border border-[#D5C9BC] bg-[#FFFCF8] shadow-[0_18px_60px_rgba(46,42,38,0.10)]">
+                <div className="bg-[#55624A] px-5 py-4 text-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/65">
+                    Today&apos;s schedule
+                  </p>
+                  <h2 className="mt-2 font-serif text-3xl">At a glance</h2>
+                  <p className="mt-2 max-w-sm text-sm leading-6 text-white/75">
+                    Classes and private sessions, held in one calm view.
+                  </p>
+                </div>
+
+                <div className="grid gap-3 p-5">
+                  {scheduleItems.map((item) => (
+                    <div
+                      key={`${item.time}-${item.title}`}
+                      className="flex items-center justify-between rounded-2xl border border-[#ECE2D7] bg-white p-4"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="min-w-[58px] text-sm text-[#7B7269]">
+                          {item.time}
+                        </div>
+                        <div>
+                          <p className="font-medium">{item.title}</p>
+                          <p className="mt-1 text-sm text-[#7B7269]">
+                            {item.meta}
+                          </p>
+                        </div>
+                      </div>
+                      <span
+                        className={`rounded-full px-2.5 py-1 text-xs ${item.tagClass}`}
+                      >
+                        {item.tag}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="border border-[#E8DDD1] bg-[#FFFCF8] p-5">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
-                  Booking card
-                </p>
-                <div className="mt-4 border border-[#EAE0D5] p-4">
-                  <p className="text-base font-medium">Pilates Foundations</p>
-                  <p className="mt-1 text-sm text-[#7B7269]">
-                    Wednesday · 12:30 pm
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="rounded-[28px] bg-[#2E2A26] p-6 text-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-white/60">
+                    Client booking
                   </p>
-                  <button className="mt-4 w-full bg-[#55624A] py-2.5 text-sm text-white">
-                    Book session
-                  </button>
+                  <h3 className="mt-3 font-serif text-2xl leading-tight">
+                    A booking flow that feels calm from first click.
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-white/75">
+                    Clear choices, clean time selection, and less friction from
+                    interest to confirmation.
+                  </p>
+                </div>
+
+                <div className="rounded-[28px] border border-[#E8DDD1] bg-[#FFFCF8] p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
+                    Booking card
+                  </p>
+                  <div className="mt-4 rounded-2xl border border-[#EAE0D5] bg-white p-4">
+                    <p className="text-base font-medium">Pilates Foundations</p>
+                    <p className="mt-1 text-sm text-[#7B7269]">
+                      Wednesday · 12:30 pm
+                    </p>
+                    <button className="mt-4 w-full rounded-full bg-[#55624A] py-2.5 text-sm text-white transition hover:bg-[#4A5640]">
+                      Book session
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
