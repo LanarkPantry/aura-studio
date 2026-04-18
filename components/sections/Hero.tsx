@@ -1,79 +1,101 @@
-import Container from "@/components/ui/Container";
-
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-28 sm:pt-32">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-40px] top-[120px] h-[220px] w-[220px] rounded-full bg-[rgba(214,166,161,0.22)] blur-3xl" />
-        <div className="absolute right-[-60px] top-[90px] h-[260px] w-[260px] rounded-full bg-[rgba(110,61,90,0.12)] blur-3xl" />
-        <div className="absolute left-[18%] top-[420px] h-[180px] w-[180px] rounded-full bg-[rgba(201,122,74,0.16)] blur-3xl" />
+    <section className="relative overflow-hidden px-4 pb-14 pt-28 sm:px-6 sm:pb-20 sm:pt-32">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-[-6rem] top-[8rem] h-[18rem] w-[18rem] rounded-full bg-[var(--rose)]/30 blur-3xl" />
+        <div className="absolute right-[-5rem] top-[10rem] h-[16rem] w-[16rem] rounded-full bg-[var(--olive)]/20 blur-3xl" />
+        <div className="absolute bottom-[4rem] left-[30%] h-[14rem] w-[14rem] rounded-full bg-[var(--plum)]/12 blur-3xl" />
       </div>
 
-      <Container className="relative">
-        <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-          <div className="max-w-[520px] pt-4">
-            <p className="mb-4 text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">
-              Booking for studios, centres, and solo practitioners
-            </p>
+      <div className="relative mx-auto max-w-[1180px]">
+        <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-end">
+          <div className="relative z-10 max-w-[520px] pt-4">
+            <div className="mb-5 inline-block border border-[var(--line)] bg-white/45 px-3 py-1.5 text-[10px] uppercase tracking-[0.26em] text-[var(--muted)]">
+              For studios, centres, and solo practitioners
+            </div>
 
-            <h1 className="max-w-[10ch] font-serif text-[2.5rem] leading-[0.94] tracking-[-0.05em] text-[var(--ink)] sm:text-[3.25rem]">
-              One system for classes and private sessions.
+            <h1 className="max-w-[10ch] text-[3rem] leading-[0.88] tracking-[-0.07em] text-[var(--ink)] sm:text-[4.5rem]">
+              Built for businesses that run both.
             </h1>
 
             <p className="mt-5 max-w-[34ch] text-[15px] leading-7 text-[var(--ink-soft)] sm:text-[16px]">
-              Aura is built for smaller businesses that don’t fit into a single
-              booking model — from group classes to one-to-one care.
+              Aura brings classes, appointments, and client flow into one system
+              for practices that do not fit neatly into a single booking model.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href="#cta"
-                className="rounded-full bg-[var(--plum)] px-5 py-3 text-[14px] font-medium text-white shadow-[0_12px_28px_rgba(110,61,90,0.24)] transition hover:translate-y-[-1px]"
+                className="bg-[var(--plum)] px-5 py-3 text-[14px] font-medium text-white shadow-[0_14px_32px_rgba(122,61,90,0.24)] transition hover:-translate-y-0.5"
               >
                 Request access
               </a>
+
               <a
                 href="#why"
-                className="rounded-full border border-[var(--line)] bg-[rgba(255,255,255,0.7)] px-5 py-3 text-[14px] text-[var(--ink)]"
+                className="border border-[var(--line)] bg-white/55 px-5 py-3 text-[14px] text-[var(--ink)] backdrop-blur-sm"
               >
                 See why it’s different
               </a>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-2 text-[12px] text-[var(--muted)]">
-              <span className="rounded-full border border-[var(--line)] px-3 py-1.5">
-                Classes
-              </span>
-              <span className="rounded-full border border-[var(--line)] px-3 py-1.5">
-                Appointments
-              </span>
-              <span className="rounded-full border border-[var(--line)] px-3 py-1.5">
-                Client flow
-              </span>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "Classes",
+                "Appointments",
+                "Client management",
+                "Mixed-format businesses",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="border border-[var(--line)] bg-white/35 px-3 py-1.5 text-[12px] text-[var(--ink-soft)]"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="relative min-h-[540px] sm:min-h-[620px] lg:min-h-[680px]">
-            <div className="absolute left-[4%] top-[24px] w-[56%] border border-[rgba(58,42,34,0.12)] bg-[rgba(255,255,255,0.76)] p-3 shadow-[0_18px_50px_rgba(58,42,34,0.12)] backdrop-blur-xl">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
-                This week
-              </p>
-              <div className="mt-3 space-y-2.5">
-                <div className="border border-[rgba(58,42,34,0.08)] bg-[var(--surface)] p-3">
+          <div className="relative min-h-[38rem] sm:min-h-[46rem] lg:min-h-[48rem]">
+            <div
+              className="absolute right-[4%] top-0 h-[58%] w-[68%] overflow-hidden border border-[rgba(255,255,255,0.48)] shadow-[0_26px_70px_rgba(70,48,38,0.14)]"
+              style={{
+                backgroundImage:
+                  'linear-gradient(rgba(45,34,29,0.10), rgba(45,34,29,0.18)), url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=80")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+
+            <div className="absolute left-[2%] top-[5.5rem] w-[52%] border border-[var(--line)] bg-[rgba(255,252,248,0.82)] p-3 shadow-[0_20px_50px_rgba(70,48,38,0.10)] backdrop-blur-xl">
+              <div className="mb-3 flex items-center justify-between">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--muted)]">
+                    Timetable
+                  </p>
+                  <p className="mt-1 text-[14px] text-[var(--ink)]">
+                    This week
+                  </p>
+                </div>
+                <div className="h-9 w-9 bg-[rgba(125,135,101,0.25)]" />
+              </div>
+
+              <div className="space-y-2.5">
+                <div className="border border-[rgba(45,34,29,0.08)] bg-white p-3">
                   <div className="flex items-center justify-between">
                     <p className="text-[13px] text-[var(--ink)]">
                       Morning Flow
                     </p>
-                    <span className="text-[11px] text-[var(--sage)]">
+                    <span className="text-[11px] text-[var(--olive)]">
                       Class
                     </span>
                   </div>
                   <p className="mt-1 text-[12px] text-[var(--muted)]">
-                    Tue · 8:30 am · Emma
+                    Tue · 8:30 am · 12 places
                   </p>
                 </div>
 
-                <div className="border border-[rgba(58,42,34,0.08)] bg-[rgba(245,237,229,0.9)] p-3">
+                <div className="border border-[rgba(45,34,29,0.08)] bg-[rgba(251,244,237,0.9)] p-3">
                   <div className="flex items-center justify-between">
                     <p className="text-[13px] text-[var(--ink)]">
                       Private Session
@@ -87,50 +109,45 @@ export default function Hero() {
                   </p>
                 </div>
 
-                <div className="border border-[rgba(58,42,34,0.08)] bg-[var(--surface)] p-3">
+                <div className="border border-[rgba(45,34,29,0.08)] bg-white p-3">
                   <div className="flex items-center justify-between">
-                    <p className="text-[13px] text-[var(--ink)]">
-                      Evening Restore
-                    </p>
-                    <span className="text-[11px] text-[var(--sage)]">
+                    <p className="text-[13px] text-[var(--ink)]">Restore</p>
+                    <span className="text-[11px] text-[var(--olive)]">
                       Class
                     </span>
                   </div>
                   <p className="mt-1 text-[12px] text-[var(--muted)]">
-                    Thu · 6:00 pm · Sophie
+                    Thu · 6:00 pm · 16 places
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="absolute right-[3%] top-[120px] w-[64%] border border-[rgba(58,42,34,0.12)] bg-[var(--surface)] p-4 shadow-[0_22px_60px_rgba(58,42,34,0.14)]">
-              <div className="flex items-center justify-between border-b border-[var(--line)] pb-3">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
-                    Booking flow
-                  </p>
-                  <h3 className="mt-1 font-serif text-[1.45rem] tracking-[-0.03em] text-[var(--ink)]">
-                    Client details
-                  </h3>
-                </div>
-                <div className="h-10 w-10 bg-[var(--olive-wash)]" />
+            <div className="absolute bottom-[3rem] right-[0] w-[66%] border border-[var(--line)] bg-[rgba(255,255,255,0.94)] p-4 shadow-[0_26px_70px_rgba(70,48,38,0.12)]">
+              <div className="border-b border-[rgba(45,34,29,0.08)] pb-3">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--muted)]">
+                  Booking journey
+                </p>
+                <h3 className="mt-1 text-[1.6rem] leading-none tracking-[-0.05em] text-[var(--ink)]">
+                  Client details
+                </h3>
               </div>
 
               <div className="mt-4 space-y-3">
-                <div className="border border-[var(--line)] bg-[rgba(247,240,232,0.75)] p-3">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                <div className="border border-[rgba(45,34,29,0.08)] bg-[var(--paper-2)] p-3">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
                     Selected
                   </p>
                   <p className="mt-2 text-[14px] text-[var(--ink)]">
-                    Pilates Foundations · Fri 12:30 pm
+                    Deep Tissue · Fri 1:00 pm
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <div className="border border-[var(--line)] bg-white px-3 py-3 text-[13px] text-[var(--muted)]">
+                  <div className="border border-[rgba(45,34,29,0.08)] bg-white px-3 py-3 text-[13px] text-[var(--muted)]">
                     Name
                   </div>
-                  <div className="border border-[var(--line)] bg-white px-3 py-3 text-[13px] text-[var(--muted)]">
+                  <div className="border border-[rgba(45,34,29,0.08)] bg-white px-3 py-3 text-[13px] text-[var(--muted)]">
                     Email
                   </div>
                 </div>
@@ -141,20 +158,21 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute bottom-[38px] left-[10%] w-[42%] border border-[rgba(58,42,34,0.1)] bg-[var(--plum)] p-4 text-white shadow-[0_18px_50px_rgba(110,61,90,0.24)]">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
-                Why it matters
+            <div className="absolute left-[12%] top-[62%] w-[34%] bg-[var(--plum)] p-4 text-white shadow-[0_24px_50px_rgba(122,61,90,0.24)]">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/70">
+                Built for mixed models
               </p>
-              <p className="mt-2 text-[14px] leading-6 text-white/90">
-                No patchwork setup. No separate systems for classes and private
-                bookings.
+              <p className="mt-2 text-[14px] leading-6 text-white/92">
+                One booking experience across classes, private sessions, and the
+                admin behind both.
               </p>
             </div>
 
-            <div className="absolute bottom-[0] right-[10%] h-[88px] w-[88px] bg-[var(--clay)] shadow-[0_14px_40px_rgba(201,122,74,0.26)]" />
+            <div className="absolute left-[56%] top-[18%] h-24 w-24 border border-white/40 bg-white/18 backdrop-blur-xl" />
+            <div className="absolute bottom-[1.2rem] right-[14%] h-20 w-20 bg-[var(--clay)] shadow-[0_18px_40px_rgba(199,123,77,0.24)]" />
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
