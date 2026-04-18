@@ -1,61 +1,23 @@
 @import "tailwindcss";
 
-/* ===== Base Theme ===== */
 :root {
-  --background: #f8f5f1;
-  --foreground: #2e2a26;
-  --surface: #fffdfc;
-  --surface-alt: #f5eee7;
-  --border: #e7ded4;
-  --primary: #55624a;
-  --primary-hover: #4a5640;
-  --muted: #6f675f;
+  color-scheme: dark;
 }
 
-/* ===== Global Styles ===== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100%;
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* ===== Typography ===== */
-h1,
-h2,
-h3,
-h4,
-h5,
-.font-serif {
-  font-family: var(--font-serif), serif;
-  letter-spacing: -0.02em;
+* {
+  box-sizing: border-box;
 }
 
-/* ===== Selection ===== */
-::selection {
-  background: #d9e1d4;
-  color: #2e2a26;
-}
-
-/* ===== Scrollbar ===== */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f3eee8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d6cdc3;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #c8bfb4;
+a {
+  color: inherit;
+  text-decoration: none;
 }
