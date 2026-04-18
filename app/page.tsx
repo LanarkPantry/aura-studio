@@ -87,15 +87,15 @@ const weeklyScheduleItems = [
 ];
 
 const benefitItems = [
-  "Run classes and appointments together",
+  "Run classes and private sessions together",
   "Give clients a calmer booking experience",
-  "Keep admin light as you grow",
+  "Keep bookings, clients, and admin in one place",
 ];
 
 export default function HomePage() {
   return (
     <main className="bg-[#F8F5F1] pb-28 text-[#2E2A26] md:pb-0">
-      <header className="sticky top-0 z-40 border-b border-[#E6DDD3] bg-[#F8F5F1]/90 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-[#E6DDD3] bg-[#F8F5F1]/92 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8CDC1] bg-[#FFFCF8] text-sm text-[#2E2A26]">
@@ -129,19 +129,51 @@ export default function HomePage() {
       </header>
 
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#E8E1D7] via-[#F3EEE7] to-[#F8F5F1]" />
-        <div className="absolute right-0 top-0 hidden h-full w-[42%] bg-[#55624A] lg:block" />
-        <div className="absolute inset-x-0 top-0 h-[320px] bg-[#E8E1D7] sm:h-[360px] lg:hidden" />
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-[42%] bg-[#55624A]" />
+        <div className="hidden lg:block absolute inset-0 bg-gradient-to-b from-[#EEE7DE] via-[#F5F0EA] to-[#F8F5F1]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pb-28 lg:pt-12">
-          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-            <div className="lg:pt-8">
+        <div className="lg:hidden bg-[#55624A] text-white">
+          <div className="px-6 pb-20 pt-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-white/80 backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-[#DDE3D6]" />
+              Built for studios, practitioners, and wellness businesses
+            </div>
+
+            <h1 className="mt-5 font-serif text-[2.7rem] leading-[0.98] tracking-tight">
+              Booking software for classes and 1:1 sessions.
+            </h1>
+
+            <p className="mt-5 max-w-md text-[16px] leading-7 text-white/78">
+              Aura Studio brings scheduling, bookings, and client management
+              into one calm, clear system for modern wellness businesses.
+            </p>
+
+            <div className="mt-7 flex flex-col gap-3">
+              <a
+                href="/book"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium text-[#2F372A] transition hover:bg-[#F3EEE8]"
+              >
+                View demo
+              </a>
+              <a
+                href="#early"
+                className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Request early access
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14 lg:pb-28 lg:pt-12">
+            <div className="hidden lg:block lg:pt-8">
               <div className="inline-flex items-center gap-2 border border-[#D8CDC1] bg-[#FFFCF8]/90 px-3 py-2 text-[11px] uppercase tracking-[0.22em] text-[#6E665F] backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-[#55624A]" />
                 Built for studios, practitioners, and wellness businesses
               </div>
 
-              <h1 className="mt-5 max-w-4xl font-serif text-[2.5rem] leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
+              <h1 className="mt-5 max-w-4xl font-serif text-4xl leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl">
                 Booking software for
                 <span className="block text-[#55624A]">
                   classes and 1:1 sessions
@@ -207,9 +239,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="grid gap-5 lg:pt-8">
-              <div className="overflow-hidden rounded-[28px] border border-[#D5C9BC] bg-[#FFFCF8] shadow-[0_18px_60px_rgba(46,42,38,0.10)]">
-                <div className="bg-[#55624A] px-5 py-4 text-white">
+            <div className="-mt-10 grid gap-5 pb-16 lg:mt-0 lg:pb-0 lg:pt-8">
+              <div className="overflow-hidden rounded-[28px] border border-[#D5C9BC] bg-[#FFFCF8] shadow-[0_18px_60px_rgba(46,42,38,0.14)]">
+                <div className="bg-[#2F372A] px-5 py-4 text-white sm:bg-[#55624A]">
                   <p className="text-xs uppercase tracking-[0.2em] text-white/65">
                     Today&apos;s schedule
                   </p>
@@ -273,6 +305,42 @@ export default function HomePage() {
                       Book session
                     </button>
                   </div>
+                </div>
+              </div>
+
+              <div className="grid gap-3 lg:hidden">
+                {benefitItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-2xl border border-[#E2D8CC] bg-[#FFFCF8] px-4 py-3"
+                  >
+                    <CheckCircle2
+                      className="mt-0.5 h-5 w-5 shrink-0 text-[#55624A]"
+                      strokeWidth={1.8}
+                    />
+                    <p className="text-sm leading-6 text-[#5F5750]">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="border-t border-[#E2D8CC] pt-6 lg:hidden">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#8A8077]">
+                  Built for
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Yoga studios
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Pilates spaces
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Solo practitioners
+                  </span>
+                  <span className="border border-[#D8CDC1] bg-[#FFFCF8] px-3 py-2 text-sm text-[#5F5750]">
+                    Wellness practices
+                  </span>
                 </div>
               </div>
             </div>
