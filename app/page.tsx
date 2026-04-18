@@ -1,16 +1,89 @@
 "use client";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { CalendarDays, Leaf, MonitorPlay, Sparkles } from "lucide-react";
+
+const mobileNavItems = [
+  {
+    href: "#why",
+    label: "Why",
+    icon: Sparkles,
+  },
+  {
+    href: "#product",
+    label: "Product",
+    icon: CalendarDays,
+  },
+  {
+    href: "#early",
+    label: "Access",
+    icon: Leaf,
+  },
+  {
+    href: "/book",
+    label: "Demo",
+    icon: MonitorPlay,
+  },
+];
+
+const scheduleItems = [
+  {
+    time: "08:30",
+    title: "Morning Flow",
+    meta: "Emma · 12 places",
+    tag: "Class",
+    tagClass: "bg-[#DDE3D6] text-[#55624A]",
+  },
+  {
+    time: "10:00",
+    title: "Private Session",
+    meta: "45 mins · 1:1",
+    tag: "Appointment",
+    tagClass: "bg-[#EADFD6] text-[#8B6548]",
+  },
+  {
+    time: "18:00",
+    title: "Evening Restore",
+    meta: "Sophie · 16 places",
+    tag: "Class",
+    tagClass: "bg-[#DDE3D6] text-[#55624A]",
+  },
+];
+
+const weeklyScheduleItems = [
+  {
+    time: "08:30",
+    title: "Morning Flow",
+    meta: "Emma · 12 places",
+    tag: "Class",
+    tagClass: "bg-[#DDE3D6] text-[#55624A]",
+  },
+  {
+    time: "10:00",
+    title: "Private Session",
+    meta: "45 mins · 1:1",
+    tag: "Appointment",
+    tagClass: "bg-[#EADFD6] text-[#8B6548]",
+  },
+  {
+    time: "12:30",
+    title: "Pilates Foundations",
+    meta: "Lara · 10 places",
+    tag: "Class",
+    tagClass: "bg-[#DDE3D6] text-[#55624A]",
+  },
+  {
+    time: "18:00",
+    title: "Evening Restore",
+    meta: "Sophie · 16 places",
+    tag: "Class",
+    tagClass: "bg-[#DDE3D6] text-[#55624A]",
+  },
+];
 
 export default function HomePage() {
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  const closeMobileNav = () => setMobileNavOpen(false);
-
   return (
-    <main className="bg-[#F8F5F1] text-[#2E2A26]">
-      <header className="sticky top-0 z-50 border-b border-[#E6DDD3] bg-[#F8F5F1]/95 backdrop-blur">
+    <main className="bg-[#F8F5F1] pb-28 text-[#2E2A26] md:pb-0">
+      <header className="sticky top-0 z-40 border-b border-[#E6DDD3] bg-[#F8F5F1]/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8CDC1] text-sm text-[#2E2A26]">
@@ -40,48 +113,7 @@ export default function HomePage() {
               View demo
             </a>
           </nav>
-
-          <button
-            type="button"
-            aria-label={mobileNavOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileNavOpen}
-            className="inline-flex items-center justify-center rounded-full border border-[#D8CDC1] p-2 md:hidden"
-            onClick={() => setMobileNavOpen((open) => !open)}
-          >
-            {mobileNavOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
         </div>
-
-        {mobileNavOpen && (
-          <div className="border-t border-[#E6DDD3] bg-[#FFFCF8] md:hidden">
-            <div className="mx-auto max-w-7xl px-6 py-5">
-              <div className="flex flex-col gap-4 text-base">
-                <a href="#why" onClick={closeMobileNav}>
-                  Why Aura
-                </a>
-                <a href="#product" onClick={closeMobileNav}>
-                  Product
-                </a>
-                <a href="#early" onClick={closeMobileNav}>
-                  Early access
-                </a>
-                <a href="/book" onClick={closeMobileNav}>
-                  View demo
-                </a>
-                <a
-                  href="mailto:hello@aurastudio.co?subject=Early%20Access%20Request"
-                  onClick={closeMobileNav}
-                >
-                  Request early access
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
       </header>
 
       <section className="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pb-28 lg:pt-12">
@@ -172,29 +204,7 @@ export default function HomePage() {
               </div>
 
               <div className="grid gap-3 p-5">
-                {[
-                  {
-                    time: "08:30",
-                    title: "Morning Flow",
-                    meta: "Emma · 12 places",
-                    tag: "Class",
-                    tagClass: "bg-[#DDE3D6] text-[#55624A]",
-                  },
-                  {
-                    time: "10:00",
-                    title: "Private Session",
-                    meta: "45 mins · 1:1",
-                    tag: "Appointment",
-                    tagClass: "bg-[#EADFD6] text-[#8B6548]",
-                  },
-                  {
-                    time: "18:00",
-                    title: "Evening Restore",
-                    meta: "Sophie · 16 places",
-                    tag: "Class",
-                    tagClass: "bg-[#DDE3D6] text-[#55624A]",
-                  },
-                ].map((item) => (
+                {scheduleItems.map((item) => (
                   <div
                     key={`${item.time}-${item.title}`}
                     className="flex items-center justify-between border border-[#ECE2D7] bg-white p-4"
@@ -407,36 +417,7 @@ export default function HomePage() {
               </div>
 
               <div className="mt-5 grid gap-3">
-                {[
-                  {
-                    time: "08:30",
-                    title: "Morning Flow",
-                    meta: "Emma · 12 places",
-                    tag: "Class",
-                    tagClass: "bg-[#DDE3D6] text-[#55624A]",
-                  },
-                  {
-                    time: "10:00",
-                    title: "Private Session",
-                    meta: "45 mins · 1:1",
-                    tag: "Appointment",
-                    tagClass: "bg-[#EADFD6] text-[#8B6548]",
-                  },
-                  {
-                    time: "12:30",
-                    title: "Pilates Foundations",
-                    meta: "Lara · 10 places",
-                    tag: "Class",
-                    tagClass: "bg-[#DDE3D6] text-[#55624A]",
-                  },
-                  {
-                    time: "18:00",
-                    title: "Evening Restore",
-                    meta: "Sophie · 16 places",
-                    tag: "Class",
-                    tagClass: "bg-[#DDE3D6] text-[#55624A]",
-                  },
-                ].map((item) => (
+                {weeklyScheduleItems.map((item) => (
                   <div
                     key={`${item.time}-${item.title}`}
                     className="flex items-center justify-between border border-[#ECE2D7] bg-white p-4"
@@ -539,6 +520,31 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <nav className="fixed inset-x-0 bottom-4 z-50 px-4 md:hidden">
+        <div className="mx-auto max-w-sm rounded-full border border-[#DCCFC2] bg-[#FFFCF8]/95 p-2 shadow-[0_12px_40px_rgba(46,42,38,0.12)] backdrop-blur-xl">
+          <div className="grid grid-cols-4 gap-1">
+            {mobileNavItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="group flex flex-col items-center justify-center rounded-full px-2 py-3 text-[#6B645D] transition hover:bg-[#F3ECE4] hover:text-[#2E2A26]"
+                >
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F4EEE7] transition group-hover:bg-[#EDE3D7]">
+                    <Icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
+                  </span>
+                  <span className="mt-1.5 text-[11px] font-medium tracking-wide">
+                    {item.label}
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
     </main>
   );
 }
