@@ -1,21 +1,21 @@
 export default function Page() {
   const featureCards = [
     {
-      eyebrow: "Unified schedule",
-      title: "Classes, appointments, and practitioner availability together",
-      copy: "Keep your public timetable and private bookings in one calmer system instead of stitching workflows together behind the scenes.",
+      eyebrow: "Flexible setup",
+      title: "Run classes, appointments, or both",
+      copy: "Aura supports businesses with timetabled classes, private bookings, or a mix of both — without forcing you into separate systems.",
       shape: "arch",
     },
     {
-      eyebrow: "Client flow",
-      title: "A softer, clearer booking experience on mobile",
-      copy: "Let clients browse classes, select sessions, and complete bookings in a way that feels premium instead of clinical.",
+      eyebrow: "Built to grow",
+      title: "Add teachers, practitioners, and locations with ease",
+      copy: "Whether you run solo or manage a growing team, Aura is designed to handle more people, more sessions, and more complexity without becoming awkward.",
       shape: "circle",
     },
     {
-      eyebrow: "Operational clarity",
-      title: "Admin tools that still feel elegant",
-      copy: "Aura should be beautiful on the front end and genuinely useful when you are managing sessions, clients, and the week ahead.",
+      eyebrow: "Fairer growth",
+      title: "Grow before pricing becomes a problem",
+      copy: "The idea is simple: you should be able to build momentum, grow your client base, and expand your offering before scale starts creating financial penalty.",
       shape: "pill",
     },
   ];
@@ -23,21 +23,21 @@ export default function Page() {
   const audience = [
     {
       title: "Studios",
-      copy: "For practices balancing recurring class schedules with premium one-to-one bookings.",
+      copy: "For businesses running regular class schedules alongside private sessions, workshops, or memberships.",
     },
     {
       title: "Centres",
-      copy: "For shared spaces coordinating rooms, practitioners, and mixed service types.",
+      copy: "For shared spaces coordinating multiple teachers, practitioners, rooms, and booking types.",
     },
     {
-      title: "Solo practitioners",
-      copy: "For independent businesses offering appointments and small-group sessions in one brand.",
+      title: "Independent practitioners",
+      copy: "For solo businesses that need room to offer one-to-one sessions, classes, or both under one brand.",
     },
   ];
 
   const adminStats = [
     { label: "Today’s bookings", value: "28" },
-    { label: "Private sessions", value: "7" },
+    { label: "Active practitioners", value: "6" },
     { label: "Class fill rate", value: "84%" },
     { label: "New clients", value: "5" },
   ];
@@ -46,12 +46,12 @@ export default function Page() {
     {
       title: "Morning Flow",
       time: "8:30 am",
-      meta: "12 booked · Studio A",
+      meta: "12 booked · Maya teaching",
     },
     {
       title: "Private Session",
       time: "11:00 am",
-      meta: "1:1 · Maya Chen",
+      meta: "1:1 · Lena Patel",
     },
     {
       title: "Evening Restore",
@@ -92,10 +92,10 @@ export default function Page() {
                 Product
               </a>
               <a
-                href="#admin"
+                href="#overview"
                 className="text-[14px] text-[var(--ink-soft)] transition hover:text-[var(--ink)]"
               >
-                Admin
+                Studio overview
               </a>
               <a
                 href="#who"
@@ -124,17 +124,17 @@ export default function Page() {
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-14">
             <div className="max-w-xl">
               <p className="text-[11px] uppercase tracking-[0.28em] text-[var(--muted)] sm:text-[12px]">
-                Booking for independent wellness practices
+                Booking for modern wellness businesses
               </p>
 
-              <h1 className="mt-4 max-w-[10ch] text-[3rem] leading-[0.92] tracking-[-0.075em] text-[var(--ink)] sm:text-[4.9rem]">
-                Classes and private sessions. One softer system.
+              <h1 className="mt-4 max-w-[11ch] text-[3rem] leading-[0.92] tracking-[-0.075em] text-[var(--ink)] sm:text-[4.9rem]">
+                Flexible booking software for classes, appointments, and growth.
               </h1>
 
-              <p className="mt-5 max-w-[33ch] text-[17px] leading-8 text-[var(--ink-soft)] sm:text-[18px]">
-                Aura is booking software for yoga studios, wellness centres, and
-                practitioners who want a calmer client journey and a cleaner way
-                to run the week.
+              <p className="mt-5 max-w-[34ch] text-[17px] leading-8 text-[var(--ink-soft)] sm:text-[18px]">
+                Aura gives studios, centres, and practitioners one system for
+                classes, private sessions, multiple team members, and day-to-day
+                operations — without making growth feel expensive too early.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -145,29 +145,22 @@ export default function Page() {
                   Request access
                 </a>
                 <a
-                  href="#admin"
+                  href="#overview"
                   className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/72 px-6 py-4 text-[15px] font-medium text-[var(--ink)] shadow-[0_10px_24px_rgba(94,109,105,0.08)] backdrop-blur-sm transition hover:-translate-y-0.5"
                 >
-                  View admin concept
+                  View studio overview
                 </a>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-2.5">
-                {[
-                  "Classes",
-                  "Appointments",
-                  "Client bookings",
-                  "Waitlists",
-                  "Practitioners",
-                  "Simple admin",
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/70 bg-white/65 px-3.5 py-2 text-[13px] text-[var(--ink-soft)] shadow-[0_6px_14px_rgba(94,109,105,0.05)]"
-                  >
-                    {item}
-                  </span>
-                ))}
+              <div className="mt-8 max-w-[36ch] rounded-[1.4rem] border border-white/80 bg-white/60 p-4 shadow-[0_10px_24px_rgba(94,109,105,0.06)]">
+                <p className="text-[13px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  Why it matters
+                </p>
+                <p className="mt-2 text-[15px] leading-7 text-[var(--ink-soft)]">
+                  Many booking tools work well for one model only. Aura is aimed
+                  at businesses that need flexibility from the start — and room
+                  to grow before pricing starts working against them.
+                </p>
               </div>
             </div>
 
@@ -187,7 +180,7 @@ export default function Page() {
                       This week
                     </p>
                     <h2 className="mt-2 brand-serif text-[2rem] leading-none tracking-[-0.04em]">
-                      Upcoming classes
+                      Upcoming sessions
                     </h2>
 
                     <div className="mt-4 space-y-3">
@@ -259,12 +252,12 @@ export default function Page() {
               </div>
 
               <div className="pointer-events-none mt-4 hidden lg:block">
-                <div className="ml-auto max-w-[260px] rounded-[999px] border border-white/70 bg-white/60 px-6 py-4 text-right shadow-[0_14px_30px_rgba(94,109,105,0.08)] backdrop-blur-sm">
-                  <p className="text-[1.5rem] leading-[1.2] tracking-[-0.04em] text-[var(--ink-soft)]">
-                    Beautiful for clients.
+                <div className="ml-auto max-w-[300px] rounded-[999px] border border-white/70 bg-white/60 px-6 py-4 text-right shadow-[0_14px_30px_rgba(94,109,105,0.08)] backdrop-blur-sm">
+                  <p className="text-[1.45rem] leading-[1.2] tracking-[-0.04em] text-[var(--ink-soft)]">
+                    Flexible for how you work now.
                   </p>
-                  <p className="mt-1 text-[1.5rem] leading-[1.2] tracking-[-0.04em] text-[var(--ink-soft)]">
-                    Grounded for admins.
+                  <p className="mt-1 text-[1.45rem] leading-[1.2] tracking-[-0.04em] text-[var(--ink-soft)]">
+                    Ready for how you grow next.
                   </p>
                 </div>
               </div>
@@ -279,12 +272,12 @@ export default function Page() {
                 Product direction
               </p>
               <h2 className="mt-4 text-[2rem] leading-[0.98] tracking-[-0.05em] sm:text-[3rem]">
-                Built for calm on the surface and clarity underneath.
+                One system for businesses that do not fit into one box.
               </h2>
-              <p className="mt-4 max-w-[46ch] text-[16px] leading-8 text-[var(--ink-soft)] sm:text-[17px]">
-                Aura should feel premium and welcoming for clients, while giving
-                practitioners and studios a cleaner operational view of classes,
-                appointments, staff, and bookings.
+              <p className="mt-4 max-w-[48ch] text-[16px] leading-8 text-[var(--ink-soft)] sm:text-[17px]">
+                Aura is being shaped for businesses that need flexibility: class
+                schedules, private bookings, multiple practitioners, and room to
+                expand without hitting an immediate pricing wall.
               </p>
             </div>
 
@@ -315,39 +308,39 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="admin" className="px-4 py-8 sm:px-6 sm:py-10">
+        <section id="overview" className="px-4 py-8 sm:px-6 sm:py-10">
           <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div className="rounded-[2rem] border border-white/80 bg-[rgba(255,255,255,0.72)] p-6 shadow-[0_20px_50px_rgba(94,109,105,0.08)] backdrop-blur-xl sm:p-8">
               <p className="text-[11px] uppercase tracking-[0.28em] text-[var(--muted)]">
-                Admin concept
+                Studio overview
               </p>
               <h2 className="mt-4 text-[2rem] leading-[0.98] tracking-[-0.05em] sm:text-[3rem]">
-                An admin page that feels organised, not heavy.
+                A clearer view of the business behind the bookings.
               </h2>
               <p className="mt-5 text-[16px] leading-8 text-[var(--ink-soft)] sm:text-[17px]">
-                The operator side should feel just as considered as the client
-                experience: easy to scan, easy to act on, and calm enough to use
-                every day.
+                The operator side should make it easy to manage teachers,
+                practitioners, bookings, class occupancy, and client activity
+                without feeling cluttered or overbuilt.
               </p>
 
               <div className="mt-6 space-y-3">
                 <div className="rounded-[1.3rem] bg-[rgba(214,228,221,0.56)] p-4">
                   <p className="brand-serif text-[1.15rem]">
-                    Today at a glance
+                    Built for mixed models
                   </p>
                   <p className="mt-1 text-[14px] leading-7 text-[var(--ink-soft)]">
-                    View bookings, class occupancy, practitioner schedules, and
-                    client activity without jumping between screens.
+                    Track classes and one-to-one sessions from the same place,
+                    even when multiple people are delivering them.
                   </p>
                 </div>
 
                 <div className="rounded-[999px] bg-[rgba(230,221,239,0.44)] px-5 py-4">
                   <p className="brand-serif text-[1.15rem]">
-                    Actionable and simple
+                    Made to scale sensibly
                   </p>
                   <p className="mt-1 text-[14px] leading-7 text-[var(--ink-soft)]">
-                    Confirm sessions, manage waitlists, and respond to changes
-                    quickly.
+                    Growth should feel supported, not punished as soon as the
+                    business starts gaining momentum.
                   </p>
                 </div>
               </div>
@@ -358,7 +351,7 @@ export default function Page() {
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">
-                      Aura admin
+                      Aura studio
                     </p>
                     <h3 className="mt-2 brand-serif text-[2rem] leading-none tracking-[-0.04em]">
                       Daily overview
@@ -446,7 +439,7 @@ export default function Page() {
                           Occupancy
                         </p>
                         <p className="mt-2 brand-serif text-[1.5rem]">
-                          Class performance
+                          Session performance
                         </p>
                       </div>
                       <div className="h-12 w-12 rounded-full bg-[rgba(214,228,221,0.9)]" />
@@ -483,7 +476,7 @@ export default function Page() {
                       </p>
                       <p className="mt-2 text-[14px] leading-7 text-[var(--ink-soft)]">
                         Waitlist enabled for Evening Restore. Two new clients
-                        booked via mobile this morning.
+                        booked on mobile this morning.
                       </p>
                     </div>
                   </div>
@@ -530,13 +523,13 @@ export default function Page() {
                 Early access
               </p>
               <h2 className="mt-4 text-[2.1rem] leading-[0.98] tracking-[-0.05em] sm:text-[3.2rem]">
-                Booking software for practices that want calm, clarity, and a
-                more beautiful client journey.
+                Booking software that fits the business you have now — and the
+                one you are building.
               </h2>
-              <p className="mt-5 max-w-[42ch] text-[16px] leading-8 text-[var(--ink-soft)] sm:text-[17px]">
-                Aura is being shaped for modern yoga and wellness businesses
-                that have outgrown generic tools but do not want something cold
-                or bloated in its place.
+              <p className="mt-5 max-w-[44ch] text-[16px] leading-8 text-[var(--ink-soft)] sm:text-[17px]">
+                Aura is for businesses that need flexibility from day one:
+                classes, appointments, multiple practitioners, and room to grow
+                without immediate financial penalty.
               </p>
             </div>
 
@@ -551,7 +544,7 @@ export default function Page() {
                 href="#product"
                 className="inline-flex items-center justify-center rounded-full bg-white/85 px-6 py-4 text-[15px] font-medium text-[var(--ink)] shadow-[0_10px_24px_rgba(94,109,105,0.08)] transition hover:-translate-y-0.5"
               >
-                Explore the concept
+                Explore the product
               </a>
             </div>
           </div>
@@ -572,15 +565,15 @@ export default function Page() {
               className="flex min-w-[64px] flex-col items-center gap-1 rounded-full px-3 py-2 text-[11px] text-[var(--ink-soft)]"
             >
               <span className="text-[18px]">◐</span>
-              <span>Flow</span>
+              <span>Product</span>
             </a>
 
             <a
-              href="#admin"
+              href="#overview"
               className="flex min-w-[64px] flex-col items-center gap-1 rounded-full px-3 py-2 text-[11px] text-[var(--ink-soft)]"
             >
               <span className="text-[18px]">✺</span>
-              <span>Admin</span>
+              <span>Overview</span>
             </a>
 
             <a
